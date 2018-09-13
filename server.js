@@ -1,14 +1,9 @@
-<<<<<<< HEAD
-'use strict';
- 
-const express = require('express');
-const mongoose = require('mongoose');
-=======
+
 "use strict";
 
 const express = require("express");
 const mongoose = require("mongoose");
->>>>>>> 1684644c0440d4f00b7f0e9f2f0fc0825ee796a7
+
 
 // Mongoose internally uses a promise-like object,
 // but its better to make Mongoose use built in es6 promises
@@ -127,13 +122,7 @@ let server;
 
 // this function connects to our database, then starts the server
 function runServer(databaseUrl, port = PORT) {
-<<<<<<< HEAD
 
-  return new Promise((resolve, reject) => {
-    mongoose.connect(databaseUrl, err => {
-      if (err) {
-        return reject(err);
-=======
   return new Promise((resolve, reject) => {
     mongoose.connect(
       databaseUrl,
@@ -150,7 +139,6 @@ function runServer(databaseUrl, port = PORT) {
             mongoose.disconnect();
             reject(err);
           });
->>>>>>> 1684644c0440d4f00b7f0e9f2f0fc0825ee796a7
       }
     );
   });
